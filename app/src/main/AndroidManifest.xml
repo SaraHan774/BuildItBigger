@@ -16,7 +16,7 @@
         <!--This meta-data tag is required to use Google Play Services.-->
         <meta-data
             android:name="com.google.android.gms.APPLICATION_ID"
-            android:value="ca-app-pub-7888773492514289~1601012319" />
+            android:value="@string/banner_ad_unit_id_sara" />
         <meta-data
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
             android:value="true"/>
