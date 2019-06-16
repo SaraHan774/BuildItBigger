@@ -7,6 +7,7 @@ public class MyBean {
 
     private String myData;
 
+    /**accessing the telleJokeLib from the backend*/
     public String getData() {
         TellJokeClass tellJokeClass = new TellJokeClass();
         myData = tellJokeClass.getJoke();

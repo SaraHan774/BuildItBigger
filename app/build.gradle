@@ -4,6 +4,7 @@ apply plugin: 'com.google.cloud.tools.endpoints-framework-client'
 buildscript {
     repositories {
         mavenCentral()
+        google()
         jcenter()
     }
     dependencies {
@@ -53,7 +54,10 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:26.1.0'
     endpointsServer project(path: ':backend', configuration: 'endpoints')
-    implementation 'com.google.android.gms:play-services-ads:17.2.1'
+
+    //prefix the flavor name before implementation to remove unnecessary dependencies
+    freeImplementation 'com.google.android.gms:play-services-ads:17.2.1'
+
     implementation 'com.google.api-client:google-api-client:1.23.0'
     implementation 'com.google.http-client:google-http-client-android:1.23.0'
     implementation 'com.google.code.findbugs:jsr305:3.0.1'
@@ -68,7 +72,8 @@ dependencies {
 
 
     androidTestImplementation 'junit:junit:4.12'
-    implementation project(path: ':tellJokeLib')
+
+    //remove this since I am accessing it through backend
     implementation project(path: ':jokeandroidlib')
 
 }
